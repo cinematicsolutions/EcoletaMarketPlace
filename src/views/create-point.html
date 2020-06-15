@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Criar Ponto de Coleta</title>
+
+    <link rel="stylesheet" href="../../public/style/main.css">
+    <link rel="stylesheet" href="../../public/style/create-point.css">
+    <link rel="stylesheet" href="../../public/style/modal_02.css">
+    <link rel="stylesheet" href="../../public/style/responsive.css">
+   
+    
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@700&display=swap" rel="stylesheet">
+    
+</head>
+<body>
+    <div id="page-create-point">
+
+            <header>
+        
+                <img src="../../public/assets/logo.svg" alt="logomarca" height="70px"> 
+        
+                <a href="../views/index.html">
+                    <span>  </span> 
+                    Voltar para a Home</a>
+        
+            </header>
+
+            <form action="">
+
+                <h1>Cadastro do ponto de coleta</h1>
+
+                <fieldset>
+                     
+                        <legend>
+                            <h2>Dados da entidade</h2>
+                        </legend>
+
+                        <div class="field">
+                            <label for=""> Nome da entidade</label>
+                            <input type="text" name="name" required>
+                        </div>
+
+                        <div class="field-group">
+                           
+                            <div class="field">
+                                <label for="address">Endereço</label>
+                                <input type="text" name="address" required>
+                            </div>
+
+                            <div class="field">
+                                <label for="address2">Número/Complemento</label>
+                                <input type="text" name="address2" required>
+                            </div>
+                        </div>
+
+                        
+                        <div class="field-group">
+                           
+                            <div class="field">
+                                <label for="state">Estado</label>
+                                <select name="uf">
+                                    <option value="">Selecione o estado</option>
+                                </select>
+                                <input type="hidden" name="state">
+                            
+                            </div>
+                            
+                            <div class="field">
+                                <label for="city">Cidade</label>
+                                <select name="city" disabled>
+                                    <option value="">Selecione a Cidade</option>
+                                </select>
+                           </div>
+                            
+                        
+                        </div>
+
+                </fieldset>
+
+                
+                <fieldset>
+                     
+                    <legend>
+                        <h2>Items de coleta</h2>
+                    </legend>
+
+                    <div class="items-grid">
+                        
+                        <li data-id="1">
+                            <img src="../../public/assets/lampadas.svg" alt="Lâmpadas">
+                                <span>Lâmpadas</span>
+                        </li>
+
+                        <li data-id="2">
+                            <img src="../../public/assets/baterias.svg" alt="Pilhas e Baterias">
+                                <span>Pilhas e Baterias</span>
+                        </li>
+                        
+                        <li data-id="3">
+                            <img src="../../public/assets/papeis-papelao.svg" alt="Papéis e Papelão">
+                                <span>Papéis e Papelão</span>
+                        </li>
+
+                        <li data-id="4">
+                            <img src="../../public/assets/eletronicos.svg" alt="Resíduos Eletrônicos">
+                                <span>Resíduos Eletrônicos</span>
+                        </li>
+
+                        <li data-id="5">
+                            <img src="../../public/assets/organicos.svg" alt="Resíduos Orgânicos">
+                                <span>Resíduos Orgânicos</span>
+                        </li>
+
+                        <li data-id="6">
+                            <img src="../../public/assets/oleo.svg" alt="Óleo de Cozinha">
+                                <span>Óleo de Cozinha</span>
+                        </li>
+                   
+                   </div>
+
+                   <input type="hidden" name="items">
+
+                </fieldset>
+
+                <button id="btnSubmit"> <a href="/">Cadastrar ponto de coleta</a></button>
+
+            </form>
+    </div>
+    
+    <div id="modal" class="hide">
+
+        <div class="content">
+            <div class="header">
+                <a href="#">Fechar</a>
+                <h1>Cadastro realizado</h1> 
+                
+            </div>
+            
+        </div>
+
+        
+    </div>
+
+
+
+
+
+    <script src="../../public/scripts/create-point.js"></script>
+    <script src="../../public/scripts/modal_02.js"></script>
+
+</body>
+</html>
+
+
+
+   
